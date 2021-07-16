@@ -215,7 +215,7 @@ public class ConnectionPool implements ConnectionFactory, Disposable, Closeable,
             long maxIdleTimeMills = maxIdleTime.toMillis();
             long maxLifeTimeMillis = maxLifeTime.toMillis();
 
-            if (maxIdleTimeMills == 0 || maxLifeTimeMillis == 0) {
+            if (maxIdleTimeMills == 0 || maxLifeTimeMillis.isZero()) {
                 return true;
             }
 
